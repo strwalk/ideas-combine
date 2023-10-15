@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate:dev": "prisma migrate dev",
+    "seed:dev": "ts-node src/app/_lib/seeds/index.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.4.1",
