@@ -7,7 +7,7 @@ interface Props {
   word2Id: WordIdOrUndefined;
 }
 
-const ideasSave = async (
+const saveIdea = async (
   word1Id: WordIdOrUndefined,
   word2Id: WordIdOrUndefined
 ) => {
@@ -19,13 +19,14 @@ const ideasSave = async (
       },
       body: JSON.stringify({ userId: 'A001', word1Id, word2Id }),
     });
+    window.alert('保存しました');
   }
 };
 
 export default function SaveButton({ word1Id, word2Id }: Props) {
   return (
     <button
-      onClick={() => ideasSave(word1Id, word2Id)}
+      onClick={() => saveIdea(word1Id, word2Id)}
       className="text-xl bg-red-300 rounded-md shadow py-3 px-4"
     >
       保存
