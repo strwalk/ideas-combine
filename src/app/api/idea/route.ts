@@ -15,3 +15,15 @@ export async function POST(req: Request) {
 
   return NextResponse.json({ res: 'ok' });
 }
+
+export async function DELETE(req: Request) {
+  const { ideaId } = await req.json();
+
+  await prisma.ideas.delete({
+    where: {
+      id: ideaId,
+    },
+  });
+
+  return NextResponse.json({ res: 'ok' });
+}
