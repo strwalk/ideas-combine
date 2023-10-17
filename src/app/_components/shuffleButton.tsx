@@ -8,7 +8,7 @@ export default function ShuffleButton() {
   return (
     <button
       onClick={() => router.refresh()}
-      className="bg-blue-200 text-xl py-3 px-6 rounded-md shadow"
+      className="bg-blue-200 hover:bg-blue-300 text-xl py-3 px-6 rounded-md shadow"
     >
       シャッフル
     </button>

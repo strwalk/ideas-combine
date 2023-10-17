@@ -26,7 +26,7 @@ export default function DeleteButton({ ideaId }: Props) {
   return (
     <button
       onClick={() => deleteIdea(router, ideaId)}
-      className="bg-green-300 rounded-md py-1 px-4"
+      className="bg-green-300 hover:bg-green-400 rounded-md py-1 px-4"
     >
       削除
     </button>

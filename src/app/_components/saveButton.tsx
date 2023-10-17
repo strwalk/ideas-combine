@@ -27,7 +27,7 @@ export default function SaveButton({ word1Id, word2Id }: Props) {
   return (
     <button
       onClick={() => saveIdea(word1Id, word2Id)}
-      className="text-xl bg-red-300 rounded-md shadow py-3 px-4"
+      className="text-xl bg-red-300 hover:bg-red-400 rounded-md shadow py-3 px-4"
     >
       保存
     </button>
