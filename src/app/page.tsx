@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import prisma from './_lib/connectToPrisma';
 import wordsJson from './_lib/seeds/words.json';
 import { generateRandomNumber, convertToTwoDimensionalArray } from './_utils';
@@ -46,7 +47,31 @@ export default async function Home() {
               </section>
             </section>
             <section className="mt-8 lg:mt-10 flex justify-center">
-              <ShuffleButton />
+              <section>
+                <ShuffleButton />
+                <Link
+                  href="/favorites"
+                  className="border border-gray-400 hover:bg-gray-50 py-2 px-6 flex items-center gap-1 mt-6"
+                >
+                  <span className="text-sm sm:text-base lg:text-lg">
+                    Favorites List
+                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-4 h-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
+                </Link>
+              </section>
             </section>
           </section>
         </section>
