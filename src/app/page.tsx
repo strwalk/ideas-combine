@@ -28,21 +28,24 @@ export default async function Home() {
   );
 
   return (
-    <main className="flex justify-center py-20 min-h-screen">
-      <section className="w-[50rem]">
+    <main className="flex justify-center items-center py-20 min-h-screen bg-back">
+      <section className="w-full md:w-[40rem] lg:w-[50rem] bg-white pt-12 pb-10 sm:px-4 rounded-xl shadow-md mx-4 sm:mx-8">
         <section className="flex justify-center">
           <section className="text-center w-full">
-            <h1 className="text-2xl">アイディア シャッフル</h1>
-            <section className="flex justify-center mt-10">
-              <section className="flex flex-col gap-14 text-2xl">
+            <h1 className="md:text-xl lg:text-2xl">Combine Ideas</h1>
+            <section className="flex justify-center mt-8 lg:mt-10">
+              <section className="flex flex-col justify-center gap-6 sm:gap-8 xl:gap-10 text-sm sm:text-base lg:text-lg">
                 {wordsList.map((twoWords, index) => (
-                  <section key={index} className="flex items-center gap-5">
+                  <section
+                    key={index}
+                    className="flex items-center gap-2 md:gap-5"
+                  >
                     <WordCards words={twoWords} />
                   </section>
                 ))}
               </section>
             </section>
-            <section className="mt-20">
+            <section className="mt-8 lg:mt-10 flex justify-center">
               <ShuffleButton />
             </section>
           </section>
