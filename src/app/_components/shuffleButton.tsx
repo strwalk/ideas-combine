@@ -8,7 +8,7 @@ export default function ShuffleButton() {
   return (
     <button
       onClick={() => router.refresh()}
-      className="bg-sky-200 hover:bg-sky-100 py-2 sm:py-3 px-12 rounded-md shadow"
+      className="bg-sky-200 hover:bg-sky-100 py-2 sm:py-3 px-12 rounded shadow"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
