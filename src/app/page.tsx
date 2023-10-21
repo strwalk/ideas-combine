@@ -1,3 +1,4 @@
+import { getUserId } from './_lib/auth';
 import prisma from './_lib/connectToPrisma';
 import wordsJson from './_lib/seeds/words.json';
 import { generateRandomNumber, convertToTwoDimensionalArray } from './_utils';
@@ -8,6 +9,8 @@ import ShuffleButton from './_components/shuffleButton';
 export const dynamic = 'force-dynamic';
 
 export default async function Home() {
+  const userId = await getUserId();
+
   const randomNumbersForDb = new Array(8)
     .fill(0)
     .map(() => generateRandomNumber(wordsJson.length));
@@ -48,11 +51,13 @@ export default async function Home() {
             </section>
             <section className="mt-9 md:mt-12 flex justify-center gap-5 md:gap-8 flex-wrap mx-10">
               <ShuffleButton />
-              <ScreenMoveButton
-                href="/favorites"
-                title="Favorites List"
-                arrowDirection="right"
-              />
+              {userId && (
+                <ScreenMoveButton
+                  href="/favorites"
+                  title="Favorites List"
+                  arrowDirection="right"
+                />
+              )}
             </section>
           </section>
         </section>
