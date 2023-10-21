@@ -16,6 +16,8 @@ const config: Config = {
       },
       colors: {
         back: '#edf2f6',
+        button: '#3ea8ff',
+        'button-hover': '#0f83fd',
       },
     },
   },
