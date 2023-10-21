@@ -29,7 +29,7 @@ export default async function Home() {
   );
 
   return (
-    <main className="flex justify-center items-center py-20 min-h-screen bg-back">
+    <main className="flex justify-center mt-10 pb-20">
       <section className="w-full md:w-[40rem] lg:w-[50rem] bg-white pt-12 pb-10 sm:px-4 rounded-xl shadow-md mx-4 sm:mx-8">
         <section className="flex justify-center">
           <section className="text-center w-full">
@@ -46,15 +46,13 @@ export default async function Home() {
                 ))}
               </section>
             </section>
-            <section className="mt-8 lg:mt-10 flex justify-center">
-              <section>
-                <ShuffleButton />
-                <ScreenMoveButton
-                  href="/favorites"
-                  title="Favorites List"
-                  arrowDirection="right"
-                />
-              </section>
+            <section className="mt-9 md:mt-12 flex justify-center gap-5 md:gap-8 flex-wrap mx-10">
+              <ShuffleButton />
+              <ScreenMoveButton
+                href="/favorites"
+                title="Favorites List"
+                arrowDirection="right"
+              />
             </section>
           </section>
         </section>
