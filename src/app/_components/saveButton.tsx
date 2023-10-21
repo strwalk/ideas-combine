@@ -3,11 +3,13 @@
 type WordIdOrUndefined = number | undefined;
 
 interface Props {
+  userId: string;
   word1Id: WordIdOrUndefined;
   word2Id: WordIdOrUndefined;
 }
 
 const saveIdea = async (
+  userId: string,
   word1Id: WordIdOrUndefined,
   word2Id: WordIdOrUndefined
 ) => {
@@ -17,16 +19,16 @@ const saveIdea = async (
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ userId: 'A001', word1Id, word2Id }),
+      body: JSON.stringify({ userId, word1Id, word2Id }),
     });
     window.alert('保存しました');
   }
 };
 
-export default function SaveButton({ word1Id, word2Id }: Props) {
+export default function SaveButton({ userId, word1Id, word2Id }: Props) {
   return (
     <button
-      onClick={() => saveIdea(word1Id, word2Id)}
+      onClick={() => saveIdea(userId, word1Id, word2Id)}
       className="bg-[#f76685] hover:bg-rose-500 text-white rounded-md shadow py-2 md:py-3 px-2 md:px-4"
     >
       <svg

@@ -1,3 +1,4 @@
+import { getUserId } from '../_lib/auth';
 import SaveButton from './saveButton';
 
 type WordOrUndefined = Word | undefined;
@@ -18,7 +19,9 @@ function WordCard({ word }: WordCardProps) {
   );
 }
 
-export default function WordCards({ words }: WordCardsProps) {
+export default async function WordCards({ words }: WordCardsProps) {
+  const userId = await getUserId();
+
   return (
     <>
       <WordCard word={words[0]} />
@@ -39,7 +42,13 @@ export default function WordCards({ words }: WordCardsProps) {
         </svg>
       </p>
       <WordCard word={words[1]} />
-      <SaveButton word1Id={words[0]?.id} word2Id={words[1]?.id} />
+      {userId && (
+        <SaveButton
+          userId={userId}
+          word1Id={words[0]?.id}
+          word2Id={words[1]?.id}
+        />
+      )}
     </>
   );
 }
