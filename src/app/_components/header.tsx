@@ -10,20 +10,22 @@ export default async function Header() {
         <Link href="/">
           <h1 className="md:text-xl text-[#0868ce] font-bold">Combine Ideas</h1>
         </Link>
-        <nav>
-          <ul className="flex gap-6 text-xs sm:text-base md:text-base">
-            <li className="hidden md:block">
-              <Link href="/" className="hover:text-gray-400">
-                Top
-              </Link>
-            </li>
-            <li>
-              <Link href="/favorites" className="hover:text-gray-400">
-                Favorites
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        {userId && (
+          <nav>
+            <ul className="flex gap-6 text-xs sm:text-base md:text-base">
+              <li className="hidden md:block">
+                <Link href="/" className="hover:text-gray-400">
+                  Top
+                </Link>
+              </li>
+              <li>
+                <Link href="/favorites" className="hover:text-gray-400">
+                  Favorites
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        )}
       </section>
       {userId ? (
         <Link
@@ -49,7 +51,7 @@ export default async function Header() {
       ) : (
         <Link
           href="/api/auth/login"
-          className="bg-button hover:bg-button-hover text-white py-1.5 px-3 md:pl-4 md:pr-5 rounded-lg shadow-sm text-sm md:text-base"
+          className="bg-button hover:bg-button-hover text-white py-1.5 px-4 md:px-6 rounded-lg shadow-sm text-sm md:text-base"
         >
           Login
         </Link>
