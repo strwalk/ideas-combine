@@ -14,7 +14,7 @@ export default function ScreenMoveButton({
   return (
     <Link
       href={href}
-      className="border border-gray-400 hover:bg-gray-50 py-2 px-6 flex items-center gap-1 mt-6"
+      className="border border-gray-400 hover:bg-gray-50 py-2 px-6 flex items-center gap-1 text-gray-500"
     >
       {arrowDirection === 'left' && (
         <svg
