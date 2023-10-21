@@ -25,7 +25,7 @@ export default async function Favorites() {
   });
 
   return (
-    <main className="flex justify-center py-20 min-h-screen bg-back">
+    <main className="flex justify-center pt-5 pb-20">
       <section className="w-full md:w-[40rem] lg:w-[50rem] bg-white pt-12 pb-10 px-4 sm:px-10 rounded-xl shadow-md mx-4 sm:mx-8">
         <section className="flex justify-center">
           <section className="text-center w-full">
