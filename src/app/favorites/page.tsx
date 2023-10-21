@@ -1,3 +1,5 @@
+import { redirect } from 'next/navigation';
+import { getUserId } from '../_lib/auth';
 import prisma from '../_lib/connectToPrisma';
 import ScreenMoveButton from '../_components/screenMoveButton';
 import DeleteButton from './deleteButton';
@@ -5,9 +7,14 @@ import DeleteButton from './deleteButton';
 export const dynamic = 'force-dynamic';
 
 export default async function Favorites() {
+  const userId = await getUserId();
+  if (!userId) {
+    redirect('/');
+  }
+
   const ideasList = await prisma.ideas.findMany({
     where: {
-      user_id: 'A001',
+      user_id: userId,
     },
     select: {
       id: true,
