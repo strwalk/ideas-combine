@@ -27,7 +27,7 @@ export default function SaveButton({ word1Id, word2Id }: Props) {
   return (
     <button
       onClick={() => saveIdea(word1Id, word2Id)}
-      className="bg-yellow-200 hover:bg-yellow-100 rounded-md shadow py-2 md:py-3 px-2 md:px-4"
+      className="bg-[#f76685] hover:bg-rose-500 text-white rounded-md shadow py-2 md:py-3 px-2 md:px-4"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
