@@ -9,7 +9,6 @@ export async function POST(req: Request) {
       user_id: userId,
       word1_id: word1Id,
       word2_id: word2Id,
-      comment: '',
     },
   });
 
