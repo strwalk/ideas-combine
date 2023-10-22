@@ -7,13 +7,19 @@ import DeleteButton from './deleteButton';
 
 export const dynamic = 'force-dynamic';
 
+interface Idea {
+  id: number;
+  word1_id: number;
+  word2_id: number;
+}
+
 export default async function Favorites() {
   const userId = await getUserId();
   if (!userId) {
     redirect('/');
   }
 
-  const ideasList = await prisma.ideas.findMany({
+  const ideasList: Idea[] = await prisma.ideas.findMany({
     where: {
       user_id: userId,
     },
