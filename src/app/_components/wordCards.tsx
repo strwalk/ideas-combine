@@ -1,20 +1,18 @@
 import { getUserId } from '../_lib/auth';
 import SaveButton from './saveButton';
 
-type WordOrUndefined = Word | undefined;
-
 interface WordCardProps {
-  word: WordOrUndefined;
+  word: Word;
 }
 
 interface WordCardsProps {
-  words: WordOrUndefined[];
+  words: Word[];
 }
 
 function WordCard({ word }: WordCardProps) {
   return (
     <div className="w-[5rem] md:w-[10rem] lg:w-[12rem] border border-gray-300 py-2 md:py-3 lg:py-4 px-2 sm:px-3 h-full flex justify-center items-center">
-      <p>{word?.word}</p>
+      <p>{word.word}</p>
     </div>
   );
 }
@@ -45,8 +43,8 @@ export default async function WordCards({ words }: WordCardsProps) {
       {userId && (
         <SaveButton
           userId={userId}
-          word1Id={words[0]?.id}
-          word2Id={words[1]?.id}
+          word1Id={words[0].id}
+          word2Id={words[1].id}
         />
       )}
     </>
