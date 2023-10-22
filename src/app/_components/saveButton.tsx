@@ -1,18 +1,12 @@
 'use client';
 
-type WordIdOrUndefined = number | undefined;
-
 interface Props {
   userId: string;
-  word1Id: WordIdOrUndefined;
-  word2Id: WordIdOrUndefined;
+  word1Id: number;
+  word2Id: number;
 }
 
-const saveIdea = async (
-  userId: string,
-  word1Id: WordIdOrUndefined,
-  word2Id: WordIdOrUndefined
-) => {
+const saveIdea = async ({ userId, word1Id, word2Id }: Props) => {
   if (process.env.NEXT_PUBLIC_BASE_URL) {
     await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/idea`, {
       method: 'POST',
@@ -28,7 +22,7 @@ const saveIdea = async (
 export default function SaveButton({ userId, word1Id, word2Id }: Props) {
   return (
     <button
-      onClick={() => saveIdea(userId, word1Id, word2Id)}
+      onClick={() => saveIdea({ userId, word1Id, word2Id })}
       className="bg-[#f76685] hover:bg-rose-500 text-white rounded-md shadow py-2 md:py-3 px-2 md:px-4"
     >
       <svg
