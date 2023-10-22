@@ -28,7 +28,7 @@ export default async function Header() {
         )}
       </section>
       {userId ? (
-        <Link
+        <a
           href="/api/auth/logout"
           className="bg-button hover:bg-button-hover text-white py-1.5 px-3 md:pl-4 md:pr-5 flex items-center gap-1 rounded-lg shadow-sm text-sm md:text-base"
         >
@@ -47,14 +47,14 @@ export default async function Header() {
             />
           </svg>
           <span>Logout</span>
-        </Link>
+        </a>
       ) : (
-        <Link
+        <a
           href="/api/auth/login"
           className="bg-button hover:bg-button-hover text-white py-1.5 px-4 md:px-6 rounded-lg shadow-sm text-sm md:text-base"
         >
           Login
-        </Link>
+        </a>
       )}
     </header>
   );
