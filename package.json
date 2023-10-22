@@ -7,9 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "migrate:dev": "prisma migrate dev",
-    "seed:dev": "ts-node src/app/_lib/seeds/index.ts",
-    "migrate-seed:dev": "yarn migrate:dev && yarn seed:dev"
+    "migrate:dev": "prisma migrate dev"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^3.2.0",
