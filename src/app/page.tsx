@@ -1,6 +1,5 @@
 import { getUserId } from './_lib/auth';
-import prisma from './_lib/connectToPrisma';
-import wordsJson from './_lib/seeds/words.json';
+import wordsJson from './_lib/words.json';
 import { generateRandomNumber, convertToTwoDimensionalArray } from './_utils';
 import WordCards from './_components/wordCards';
 import ScreenMoveButton from './_components/screenMoveButton';
@@ -11,25 +10,16 @@ export const dynamic = 'force-dynamic';
 export default async function Home() {
   const userId = await getUserId();
 
-  const randomNumbersForDb = new Array(8)
+  const randomNumbers = new Array(8)
     .fill(0)
     .map(() => generateRandomNumber(wordsJson.length));
 
-  const wordsResponse = await prisma.words.findMany({
-    where: {
-      id: {
-        in: randomNumbersForDb,
-      },
-    },
-  });
-
-  const randomNumbers = convertToTwoDimensionalArray(randomNumbersForDb, 2);
-
-  const wordsList = randomNumbers.map((numbers: number[]) =>
-    numbers.map((number) =>
-      wordsResponse.find((word: Word) => word.id === number)
-    )
+  const wordsFindList = randomNumbers.map(
+    (randomNumber: number) =>
+      wordsJson.find((word) => word.id === randomNumber) ?? wordsJson[0]
   );
+
+  const wordsList = convertToTwoDimensionalArray(wordsFindList, 2);
 
   return (
     <main className="flex justify-center mt-10 pb-20">
