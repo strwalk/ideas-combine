@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation';
 import { getUserId } from '../_lib/auth';
 import prisma from '../_lib/connectToPrisma';
+import { findWord } from '../_utils';
 import ScreenMoveButton from '../_components/screenMoveButton';
 import DeleteButton from './deleteButton';
 
@@ -18,16 +19,8 @@ export default async function Favorites() {
     },
     select: {
       id: true,
-      word1: {
-        select: {
-          word: true,
-        },
-      },
-      word2: {
-        select: {
-          word: true,
-        },
-      },
+      word1_id: true,
+      word2_id: true,
     },
   });
 
@@ -47,8 +40,8 @@ export default async function Favorites() {
                         className="border-b border-x first:border-t border-gray-200"
                       >
                         <td className="py-3 pl-2">{index + 1}</td>
-                        <td>{idea.word1.word}</td>
-                        <td>{idea.word2.word}</td>
+                        <td>{findWord(idea.word1_id)}</td>
+                        <td>{findWord(idea.word2_id)}</td>
                         <td>
                           <div className="flex justify-center">
                             <DeleteButton ideaId={idea.id} />
