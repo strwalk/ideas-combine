@@ -23,7 +23,7 @@ export default function SaveButton({ userId, word1Id, word2Id }: Props) {
   return (
     <button
       onClick={() => saveIdea({ userId, word1Id, word2Id })}
-      className="bg-[#f76685] hover:bg-rose-500 text-white rounded-md shadow py-2 md:py-3 px-2 md:px-4"
+      className="bg-[#f76685] hover:bg-rose-500 text-white rounded-md shadow py-2 md:py-3.5 lg:py-4 px-2 md:px-3.5 lg:px-4"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ export default function SaveButton({ userId, word1Id, word2Id }: Props) {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-6 h-6"
+        className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6"
       >
         <path
           strokeLinecap="round"
