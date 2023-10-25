@@ -3,15 +3,20 @@ import SaveButton from './saveButton';
 
 interface WordCardProps {
   word: Word;
+  userId: string | undefined;
 }
 
 interface WordCardsProps {
   words: Word[];
 }
 
-function WordCard({ word }: WordCardProps) {
+function WordCard({ word, userId }: WordCardProps) {
+  const defaultCardWidth = userId ? 'w-[6rem]' : 'w-[7rem]';
+
   return (
-    <div className="w-[5rem] md:w-[10rem] lg:w-[12rem] border border-gray-300 py-2 md:py-3 lg:py-4 px-2 sm:px-3 h-full flex justify-center items-center">
+    <div
+      className={`${defaultCardWidth} sm:w-[9rem] md:w-[10rem] lg:w-[12rem] border border-gray-300 py-2 md:py-3 lg:py-4 px-2 sm:px-3 h-full flex justify-center items-center`}
+    >
       <p>{word.word}</p>
     </div>
   );
@@ -22,7 +27,7 @@ export default async function WordCards({ words }: WordCardsProps) {
 
   return (
     <>
-      <WordCard word={words[0]} />
+      <WordCard word={words[0]} userId={userId} />
       <p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +44,7 @@ export default async function WordCards({ words }: WordCardsProps) {
           />
         </svg>
       </p>
-      <WordCard word={words[1]} />
+      <WordCard word={words[1]} userId={userId} />
       {userId && (
         <SaveButton
           userId={userId}
