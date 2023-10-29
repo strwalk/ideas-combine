@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import { getUserId } from '../_lib/auth';
 import prisma from '../_lib/connectToPrisma';
@@ -6,6 +7,10 @@ import ScreenMoveButton from '../_components/screenMoveButton';
 import DeleteButton from './deleteButton';
 
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Favorites | Combine Ideas',
+};
 
 interface Idea {
   id: number;
