@@ -8,9 +8,9 @@ export default function ShuffleButton() {
   return (
     <button
       onClick={() => router.refresh()}
-      className="border border-gray-400 hover:bg-gray-50 py-2 px-8 flex items-center gap-2.5 text-gray-500"
+      className="border border-gray-400 hover:bg-gray-50 py-2 px-8 flex justify-center items-center gap-2.5 text-gray-500"
     >
-      <span className="text-sm sm:text-base lg:text-lg">Shuffle</span>
+      <span>Shuffle</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
