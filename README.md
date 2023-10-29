@@ -4,6 +4,10 @@ Word と Word をランダムに組み合わせるアイデアメーカー
 
 新企画の着想や、アイデア出しに詰まった時に便利です
 
+| 画面イメージ  |
+| ----  |
+| <img width="600" alt="ideas-combine" src="https://github.com/strwalk/ideas-combine/assets/61673527/68bf0cf8-169a-4607-8325-5157e36c3aff"> |
+
 ## Getting Started
 
 1. GitHub リポジトリのクローン
