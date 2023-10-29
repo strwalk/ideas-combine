@@ -121,22 +121,22 @@ Word と Word をランダムに組み合わせるアイデアメーカー
 ## Usage
 
 - 基本機能（Word のシャッフル）
-  - Top ページ[（http://localhost:3000）](http://localhost:3000)を開く
+  - Top ページ（[http://localhost:3000](http://localhost:3000)）を開く
   - 「Shuffle」ボタンをクリック
   - ランダムに表示される Word の組み合わせから、新たなアイデアが生まれるかも？
 - 気に入ったアイデアの保存
   - ログイン後に使用可能な機能
-  - Top ページ[（http://localhost:3000）](http://localhost:3000)を開く
+  - Top ページ（[http://localhost:3000](http://localhost:3000)）を開く
   - 「Shuffle」ボタンをクリックし、気に入ったアイデアを見つけたら「Save」ボタンをクリック
   - 「保存しました」と表示されたら「OK」で閉じる
 - 保存したアイデアの確認
   - ログイン後に使用可能な機能
-  - Top ページ[（http://localhost:3000）](http://localhost:3000)を開く
+  - Top ページ（[http://localhost:3000](http://localhost:3000)）を開く
   - 「Favorites List」ボタンをクリック
   - 保存したアイデアが表示される
 - 保存したアイデアの削除
   - ログイン後に使用可能な機能
-  - Top ページ[（http://localhost:3000）](http://localhost:3000)を開く
+  - Top ページ（[http://localhost:3000](http://localhost:3000)）を開く
   - 「Favorites List」ボタンをクリック
   - 削除したい行の一番右の削除ボタンをクリック
   - 「削除しました」と表示されたら「OK」で閉じる
