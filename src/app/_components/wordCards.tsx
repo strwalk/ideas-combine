@@ -3,7 +3,7 @@ import SaveButton from './saveButton';
 
 interface WordCardProps {
   word: Word;
-  userId: string | undefined;
+  userId: string;
 }
 
 interface WordCardsProps {
