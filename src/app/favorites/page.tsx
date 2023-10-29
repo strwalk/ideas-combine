@@ -31,11 +31,11 @@ export default async function Favorites() {
   });
 
   return (
-    <main className="flex justify-center pt-5 pb-20">
-      <section className="w-full md:w-[40rem] lg:w-[50rem] bg-white pt-12 pb-10 px-4 sm:px-10 rounded-xl shadow-md mx-4 sm:mx-8">
+    <main className="flex justify-center pt-10 pb-20 px-2">
+      <section className="w-full md:w-[40rem] lg:w-[50rem] bg-white pt-12 pb-10 px-4 sm:px-10 rounded-xl shadow-md">
         <section className="flex justify-center">
           <section className="text-center w-full">
-            <h1 className="md:text-xl lg:text-2xl">Favorites List</h1>
+            <h1 className="text-2xl">Favorites List</h1>
             <section className="mt-5 md:mt-8 lg:mt-10">
               {ideasList.length > 0 ? (
                 <table className="w-full rounded-xl text-sm sm:text-base">
@@ -61,7 +61,7 @@ export default async function Favorites() {
                 <p>保存したアイデアはありません</p>
               )}
             </section>
-            <section className="flex justify-center mt-6">
+            <section className="flex justify-center mt-10">
               <ScreenMoveButton
                 href="/"
                 title="Top Page"
