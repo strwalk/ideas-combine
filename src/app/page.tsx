@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { getUserId } from './_lib/auth';
 import wordsJson from './_lib/words.json';
 import { generateRandomNumber } from './_utils';
@@ -7,6 +8,10 @@ import ScreenMoveButton from './_components/screenMoveButton';
 import ShuffleButton from './_components/shuffleButton';
 
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Top | Combine Ideas',
+};
 
 export default async function Home() {
   const userId = await getUserId();
