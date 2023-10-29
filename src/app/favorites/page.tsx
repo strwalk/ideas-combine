@@ -36,7 +36,7 @@ export default async function Favorites() {
         <section className="flex justify-center">
           <section className="text-center w-full">
             <h1 className="text-2xl">Favorites List</h1>
-            <section className="mt-5 md:mt-8 lg:mt-10">
+            <section className="mt-5 md:mt-8">
               {ideasList.length > 0 ? (
                 <table className="w-full rounded-xl text-sm sm:text-base">
                   <tbody>
@@ -45,11 +45,13 @@ export default async function Favorites() {
                         key={idea.id}
                         className="border-b border-x first:border-t border-gray-200"
                       >
-                        <td className="py-3 pl-2">{index + 1}</td>
+                        <td className="py-3 ml-1.5 sm:ml-3 flex justify-start">
+                          {index + 1}
+                        </td>
                         <td>{findWord(idea.word1_id)}</td>
                         <td>{findWord(idea.word2_id)}</td>
                         <td>
-                          <div className="flex justify-center">
+                          <div className="flex justify-end mr-1 sm:mr-3">
                             <DeleteButton ideaId={idea.id} />
                           </div>
                         </td>
