@@ -11,10 +11,17 @@ export default function ScreenMoveButton({
   href,
   arrowDirection,
 }: Props) {
+  const paddingX =
+    arrowDirection === 'left'
+      ? 'pl-3 pr-6'
+      : arrowDirection === 'right'
+      ? 'pl-6 pr-3'
+      : '';
+
   return (
     <Link
       href={href}
-      className="border border-gray-400 hover:bg-gray-50 py-2 px-6 flex items-center gap-1 text-gray-500"
+      className={`border border-gray-400 hover:bg-gray-50 py-2 ${paddingX} flex justify-center items-center gap-1 text-gray-500 w-full sm:w-[20rem]`}
     >
       {arrowDirection === 'left' && (
         <svg
@@ -32,7 +39,7 @@ export default function ScreenMoveButton({
           />
         </svg>
       )}
-      <span className="text-sm sm:text-base lg:text-lg">{title}</span>
+      <span className="sm:text-lg">{title}</span>
       {arrowDirection === 'right' && (
         <svg
           xmlns="http://www.w3.org/2000/svg"
