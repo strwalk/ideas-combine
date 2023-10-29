@@ -58,13 +58,13 @@ Word と Word をランダムに組み合わせるアイデアメーカー
 
   - PostgreSQL 関連
 
-    - `POSTGRES_USER`、`POSTGRES_PASSWORD`、`POSTGRES_DB`、`POSTGRES_TZ`は、任意の値を設定
-      - `POSTGRES_USER`の例：`user`
-      - `POSTGRES_PASSWORD`の例：`password`
-      - `POSTGRES_DB`の例：`database`
-      - `POSTGRES_TZ`の例：`Asia/Tokyo`
-    - `DATABASE_URL`は、＊1, ＊2 のどちらか片方を追加
-
+    - POSTGRES_USE`、POSTGRES_PASSWORD、POSTGRES_DB、POSTGRES_TZは、任意の値を設定
+      - POSTGRES_USERの例：`user`
+      - POSTGRES_PASSWORDの例：`password`
+      - POSTGRES_DBの例：`database`
+      - POSTGRES_TZの例：`Asia/Tokyo`
+    - DATABASE_URLは、＊1, ＊2 のどちらか片方を追加
+ 
     ```sh
     POSTGRES_USER=XXXXX
     POSTGRES_PASSWORD=XXXXX
@@ -116,27 +116,27 @@ Word と Word をランダムに組み合わせるアイデアメーカー
 
 7. ブラウザで確認
 
-- [http://localhost:3000](http://localhost:3000)を開く
+- [http://localhost:3000](http://localhost:3000) を開く
 
 ## Usage
 
 - 基本機能（Word のシャッフル）
-  - Top ページ（http://localhost:3000）を開く
+  - Top ページ[（http://localhost:3000）](http://localhost:3000)を開く
   - 「Shuffle」ボタンをクリック
   - ランダムに表示される Word の組み合わせから、新たなアイデアが生まれるかも？
 - 気に入ったアイデアの保存
   - ログイン後に使用可能な機能
-  - Top ページ（http://localhost:3000）を開く
+  - Top ページ[（http://localhost:3000）](http://localhost:3000)を開く
   - 「Shuffle」ボタンをクリックし、気に入ったアイデアを見つけたら「Save」ボタンをクリック
   - 「保存しました」と表示されたら「OK」で閉じる
 - 保存したアイデアの確認
   - ログイン後に使用可能な機能
-  - Top ページ（http://localhost:3000）を開く
+  - Top ページ[（http://localhost:3000）](http://localhost:3000)を開く
   - 「Favorites List」ボタンをクリック
   - 保存したアイデアが表示される
 - 保存したアイデアの削除
   - ログイン後に使用可能な機能
-  - Top ページ（http://localhost:3000）を開く
+  - Top ページ[（http://localhost:3000）](http://localhost:3000)を開く
   - 「Favorites List」ボタンをクリック
   - 削除したい行の一番右の削除ボタンをクリック
   - 「削除しました」と表示されたら「OK」で閉じる
