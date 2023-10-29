@@ -3,12 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "prisma migrate dev && next dev",
     "build": "next build",
-    "start": "next start",
-    "start:prod": "prisma migrate deploy && next start",
-    "lint": "next lint",
-    "migrate:dev": "prisma migrate dev"
+    "start": "prisma migrate deploy && next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^3.2.0",

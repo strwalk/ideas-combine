@@ -21,4 +21,4 @@ COPY --from=builder /app/prisma ./prisma
 COPY --from=builder /app/.next ./.next
 
 EXPOSE 3000
-CMD ["yarn", "start:prod"]
+CMD ["yarn", "start"]
