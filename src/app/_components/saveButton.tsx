@@ -8,14 +8,22 @@ interface Props {
 
 const saveIdea = async ({ userId, word1Id, word2Id }: Props) => {
   if (process.env.NEXT_PUBLIC_BASE_URL) {
-    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/idea`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ userId, word1Id, word2Id }),
-    });
-    window.alert('保存しました');
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/idea`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userId, word1Id, word2Id }),
+      }
+    );
+
+    if (response.ok) {
+      window.alert('保存しました');
+    } else {
+      throw new Error('Failed to POST idea data');
+    }
   }
 };
 

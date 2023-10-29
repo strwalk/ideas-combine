@@ -8,15 +8,22 @@ interface Props {
 
 const deleteIdea = async (router: any, ideaId: number) => {
   if (process.env.NEXT_PUBLIC_BASE_URL) {
-    await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/idea`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ ideaId }),
-    });
-    window.alert('削除しました');
-    router.refresh();
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/idea`,
+      {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ideaId }),
+      }
+    );
+    if (response.ok) {
+      window.alert('削除しました');
+      router.refresh();
+    } else {
+      throw new Error('Failed to DELETE idea data');
+    }
   }
 };
 
