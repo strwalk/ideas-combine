@@ -32,7 +32,7 @@ export default async function Home() {
           <section className="flex flex-col gap-9 w-full sm:w-[20rem]">
             <h1 className="text-2xl">Combine Ideas</h1>
             <WordCards wordsList={wordsList} />
-            <section className="flex flex-col gap-6 sm:mt-6 sm:text-lg">
+            <section className="flex flex-col gap-6 sm:mt-5 sm:text-lg">
               {userId && (
                 <SaveButton
                   userId={userId}
