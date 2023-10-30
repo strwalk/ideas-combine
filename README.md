@@ -4,9 +4,12 @@ Word と Word をランダムに組み合わせるアイデアメーカー
 
 新企画の着想や、アイデア出しに詰まった時に便利です
 
-| 画面イメージ  |
-| ----  |
-| <img width="600" alt="ideas-combine" src="https://github.com/strwalk/ideas-combine/assets/61673527/68bf0cf8-169a-4607-8325-5157e36c3aff"> |
+<br/>
+
+<!-- prettier-ignore -->
+| 画面イメージ |
+| --------- |
+| <img width="500" alt="ideas-combine" src="https://github.com/strwalk/ideas-combine/assets/61673527/68bf0cf8-169a-4607-8325-5157e36c3aff"> |
 
 ## Getting Started
 
@@ -34,7 +37,7 @@ Word と Word をランダムに組み合わせるアイデアメーカー
 
 4. Auth0 の設定
 
-- Auth0 にログイン／サインアップし、新規アプリを作成
+- [Auth0](https://auth0.com/)にログイン／サインアップし、新規アプリを作成
 - Regular Web App を選択
 - Applications > Applications > 作成したアプリを選択 > Settings で下記を設定し保存
   - Allowed Callback URLs
@@ -62,13 +65,13 @@ Word と Word をランダムに組み合わせるアイデアメーカー
 
   - PostgreSQL 関連
 
-    - POSTGRES_USE`、POSTGRES_PASSWORD、POSTGRES_DB、POSTGRES_TZは、任意の値を設定
-      - POSTGRES_USERの例：`user`
-      - POSTGRES_PASSWORDの例：`password`
-      - POSTGRES_DBの例：`database`
-      - POSTGRES_TZの例：`Asia/Tokyo`
-    - DATABASE_URLは、＊1, ＊2 のどちらか片方を追加
- 
+    - POSTGRES_USE`、POSTGRES_PASSWORD、POSTGRES_DB、POSTGRES_TZ は、任意の値を設定
+      - POSTGRES_USER の例：`user`
+      - POSTGRES_PASSWORD の例：`password`
+      - POSTGRES_DB の例：`database`
+      - POSTGRES_TZ の例：`Asia/Tokyo`
+    - DATABASE_URL は、＊1, ＊2 のどちらか片方を追加
+
     ```sh
     POSTGRES_USER=XXXXX
     POSTGRES_PASSWORD=XXXXX
@@ -122,12 +125,16 @@ Word と Word をランダムに組み合わせるアイデアメーカー
 
 - [http://localhost:3000](http://localhost:3000) を開く
 
-## Usage
+## Features
 
 - 基本機能（Word のシャッフル）
   - Top ページ（[http://localhost:3000](http://localhost:3000)）を開く
   - 「Shuffle」ボタンをクリック
   - ランダムに表示される Word の組み合わせから、新たなアイデアが生まれるかも？
+
+<details>
+<summary>その他の機能</summary>
+
 - 気に入ったアイデアの保存
   - ログイン後に使用可能な機能
   - Top ページ（[http://localhost:3000](http://localhost:3000)）を開く
@@ -157,6 +164,8 @@ Word と Word をランダムに組み合わせるアイデアメーカー
   - ログイン画面下部の「サインアップ」の文字をクリック
   - メールアドレス・パスワードを入力
   - 「続ける」ボタンをクリック
+
+</details>
 
 ## Built With
 
