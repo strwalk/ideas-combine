@@ -18,10 +18,6 @@ Word と Word をランダムに組み合わせるアイデアメーカー
 1. GitHub リポジトリのクローン
 
    ```sh
-   # HTTPSの場合
-   git clone https://github.com/strwalk/ideas-combine.git
-
-   # SSHの場合
    git clone git@github.com:strwalk/ideas-combine.git
    ```
 
