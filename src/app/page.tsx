@@ -26,8 +26,8 @@ export default async function Home() {
   );
 
   return (
-    <main className="flex justify-center pt-8 sm:pt-10 pb-12 px-4">
-      <section className="w-full md:w-[35rem] bg-white pt-10 sm:pt-14 pb-9 px-4 rounded-xl shadow-md">
+    <main className="flex justify-center pt-8 sm:pt-10 pb-12 px-6 sm:px-4">
+      <section className="w-full md:w-[35rem] bg-white pt-10 sm:pt-14 pb-9 px-8 sm:px-4 rounded-xl shadow-md">
         <section className="flex justify-center text-center">
           <section className="flex flex-col gap-9 w-full sm:w-[20rem]">
             <h1 className="text-2xl">Combine Ideas</h1>
