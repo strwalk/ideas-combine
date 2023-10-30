@@ -11,7 +11,7 @@ Word と Word をランダムに組み合わせるアイデアメーカー
 <!-- prettier-ignore -->
 | 画面イメージ |
 | --------- |
-| <img width="500" alt="ideas-combine" src="https://github.com/strwalk/ideas-combine/assets/61673527/68bf0cf8-169a-4607-8325-5157e36c3aff"> |
+| <img width="500" alt="ideas-combine" src="https://github.com/strwalk/ideas-combine/assets/61673527/cff1f5ee-bea9-4b46-a45c-03e7f93634ae"> |
 
 ## Getting Started
 
